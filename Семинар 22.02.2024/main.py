@@ -14,6 +14,5 @@ url = f'https://api.github.com/repos/{owner}/{repo}/contents/{path}'
 response = requests.get(url, headers=headers)
 data = response.json()
 
-# Print out directory and file names
 for item in data:
     print(f'{item["type"]}: {item["name"]}')
